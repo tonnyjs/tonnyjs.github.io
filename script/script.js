@@ -2,6 +2,33 @@
 Свойство | Методы | События
 */
 
+const text = ['Unixsoft ', 'Услуги в сфере IT'];
+const outputElement = document.querySelector('.main_wrap'); // Используем querySelector с классом
+let currentTextIndex = 0;
+let currentCharIndex = 0;
+
+function typeText() {
+  if (currentTextIndex < text.length) {
+    const currentText = text[currentTextIndex];
+    if (currentCharIndex < currentText.length) {
+      outputElement.textContent += currentText[currentCharIndex];
+      currentCharIndex++;
+      setTimeout(typeText, 50); // Задержка в миллисекундах
+    } else {
+      if (currentTextIndex !== 0) {
+        outputElement.innerHTML += '<br>'; // Добавить перенос строки
+      }
+      currentCharIndex = 0;
+      currentTextIndex++;
+      setTimeout(typeText, 1000); // Задержка между фразами в миллисекундах
+    }
+  }
+}
+
+typeText();
+
+
+
 // function for tabs
 function openTab(tabId) {
     const tabButtons = document.querySelectorAll('.tab-button');
