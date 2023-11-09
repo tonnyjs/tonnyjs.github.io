@@ -87,9 +87,8 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
+    font-size: 3rem;
 }
-
-.main_wrap h1{font-size: 5rem;}
 
 /* about */
 .about {
