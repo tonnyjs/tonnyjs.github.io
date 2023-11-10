@@ -90,6 +90,8 @@ body {
     font-size: 3rem;
 }
 
+#main_wrap__text {font-size: 2rem; color: var(--gray); border-right: 1px solid var(--gray);}
+
 /* about */
 .about {
     /* background-color: var(--silver); */
