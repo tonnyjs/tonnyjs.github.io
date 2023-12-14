@@ -12,7 +12,7 @@ function myFunction() {
 }
 
 let i = 0;
-let txt = 'Цифровое агентство';
+let txt = 'Услуги в сфере IT';
 let speed = 100; 
 
 function typeWriter() {
