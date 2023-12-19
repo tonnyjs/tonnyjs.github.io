@@ -2,6 +2,7 @@
 Свойство | Методы | События
 */
 
+//function for tabs
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -11,6 +12,8 @@ function myFunction() {
   }
 }
 
+
+//for print text
 let i = 0;
 let txt = 'Услуги в сфере IT';
 let speed = 100; 
@@ -52,8 +55,21 @@ function openTab(tabId) {
 }
 
 
-// navigation
 
-function darkMode() {
-  alert('0x000fff')
-}
+//function for dark mode
+document.addEventListener("DOMContentLoaded", function() {
+  const darkIcon = document.querySelector(".dark-icon");
+
+  //Добавим обработчик событий для клика на элемент с классом dark-icon
+  darkIcon.addEventListener('click', function() {
+    darkMode();
+  });
+
+  //function for dark mode
+  function darkMode() {
+    let dark = document.body;
+    dark.classList.toggle("dark-mode");
+  }
+})
+
+

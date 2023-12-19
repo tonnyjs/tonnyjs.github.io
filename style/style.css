@@ -12,6 +12,12 @@
 
 body {
     background-color: var(--white);
+    color: var(--black);
+}
+
+.dark-mode {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 ::selection {
@@ -72,12 +78,16 @@ body {
 
 .navigation a{
     text-decoration: none;
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 .navigation a:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+.mask {
+    
 }
 
 /* main */
@@ -91,7 +101,7 @@ body {
 }
 
 .main_wrap h1{
-    color: var(--dark-silver);
+    /* color: var(--dark-silver); */
     font-size: 6rem;
     font-weight: 400;
 }
@@ -119,21 +129,24 @@ body {
 
 .about_wrap p{}
 
-.about_title__text {
-    /* background-color: var(--white); */
-}
 
 /* project */
 .project__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
+    align-items: start;
 }
 
 .project__inner {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    width: 100%;
+    max-width: 400px; /* или другое значение по вашему выбору */
+    text-align: center;
+}
+
+.project__inner img {
+    max-width: 100%;
+    height: auto;
 }
 
 .project h2 {
@@ -141,6 +154,13 @@ body {
     font-weight: normal;
     padding-bottom: 25px;
     letter-spacing:2px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    .project__inner {
+        max-width: 100%;
+    }
 }
 
 
@@ -231,7 +251,11 @@ body {
 
 .service details p, ul {color: var(--grey); text-indent: 20px;}
 
-.service details:hover {color: var(--grey);}
+.service details:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all .5s;
+}
 
 /* Скрыть стандартную стрелку */
 summary {display: block; padding-bottom: 10px;}
@@ -244,7 +268,7 @@ details summary::before {
 
 /* footer */
 .footer {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
 }
 
 .footer_wrap {
@@ -252,12 +276,10 @@ details summary::before {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    
 }
 
 .footer__inner {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 .footer__inner span {
@@ -267,23 +289,19 @@ details summary::before {
 
 .footer__inner li {
     list-style-type: none;
-    color: var(--black);
 }
 
 .footer__inner a {
-    color: var(--black);
     text-decoration: none;
 }
 
 .footer__inner a:hover {
-    color: var(--grey);
+    text-decoration: underline;
+    text-underline-offset: 3px;
     transition: all .5s;
 }
 
 
 
-.footer__logo {
-    display: flex;
-    justify-content: space-between;
-}
+
 
