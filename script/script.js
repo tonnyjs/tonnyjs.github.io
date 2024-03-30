@@ -1,7 +1,7 @@
 /*
 Свойство | Методы | События
 */
-
+000000111100001111
 //function for tabs
 function myFunction() {
   var x = document.getElementById("myTopnav");
